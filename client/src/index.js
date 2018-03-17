@@ -16,6 +16,16 @@ const store = createStore(
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+
+const a11y = require('react-a11y').default
+a11y(React, ReactDOM, {
+	rules: {
+	'img-uses-alt': 'warn', 
+	'redundant-alt': [ 'warn', [ 'image', 'photo', 'foto', 'bild' ]]
+	}
+})
+
+
 ReactDOM.render(
 	<Provider store={store}>
 		<App/>
