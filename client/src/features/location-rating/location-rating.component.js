@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Button } from "../../ui-kit/button";
 
 export class LocationRating extends Component {
-  location = { name: "Place name", lat: 1, lon: 2 };
+  location = { name: 'Place name', lat: 1, lon: 2 };
   accessibilityFeatures = [
-    "Accessible parking",
-    "Ramp leading to the front door",
-    "Front door opens automatically",
-    "Signage is easily legible",
-    "Service animal is welcome"
+    {label: 'Accessible parking', state: 'accessibleParking'},
+    {label: 'Ramp leading to the front door', state: 'rampToTheFrontDoor'},
+    {label: 'Front door opens automatically', state: 'frontDoorOpensAutomatically'},
+    {label: 'Signage is easily legible', state: 'signageEasilyLegible'},
+    {label: 'Service animal is welcome', state: 'serviceAnimalWelcome'}
   ];
 
   render() {
@@ -21,10 +21,10 @@ export class LocationRating extends Component {
               <input
                 type="checkbox"
                 onClick={() =>
-                  this.props.onClickFeature(this.location, feature)
+                  this.props.onClickFeature(this.location, feature.state)
                 }
               />{" "}
-              {feature}{" "}
+              {feature.label}{" "}
             </div>
           ))}
         </div>
