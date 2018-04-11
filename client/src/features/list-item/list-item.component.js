@@ -10,13 +10,15 @@ export const Item = styled.li`
   margin: 10px 0px;
   border: 2px solid ${variables.colour.darkestPurple};
   background-color: ${variables.colour.mediumPurple};
-  height: 44px;
+  height: 60px;
   align-items: center;
   padding-left: 15px;
+  
 `;
 
 const StyledButton = Button.extend`
-  padding: 10px;
+  margin: 10px;
+  min-height: 36px;
 `
 
 export const ListItem = ({ location, onSelectLocation }) => (

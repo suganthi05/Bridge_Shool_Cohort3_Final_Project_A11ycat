@@ -25,6 +25,7 @@ const SearchContainer = styled.div`
   justify-content: space-between;
   margin: 20px 0px 0px 0px;
   min-height: 36px;
+  padding: 0 30px 0 15px;
 `;
 
 const SearchButton = Button.extend`
